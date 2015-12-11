@@ -1,10 +1,13 @@
 'use strict';
 
-import $ from 'webpack-zepto';
-$.ajaxSettings.crossDomain = true;
+import Vue from 'vue';
+import Router from 'vue-router';
 
-(() => {
-  $.getJSON('http://127.0.0.1:8200/categories', function(data) {
-    console.log(data);
-  });
-})();
+Vue.use(Router);
+
+var router = new Router({
+  history: false
+});
+
+import App from './components/app.vue'
+router.start(App, 'app');
