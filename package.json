@@ -1,0 +1,19 @@
+{
+  "name": "vocabulary",
+  "version": "0.1.0",
+  "description": "a SPA with vocabulary REST api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/aguegu/vocabulary-h5.git"
+  },
+  "author": "aGuegu <weihong.guan@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aguegu/vocabulary-h5/issues"
+  },
+  "homepage": "https://github.com/aguegu/vocabulary-h5#readme"
+}
