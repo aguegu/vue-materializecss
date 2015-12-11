@@ -2,9 +2,10 @@
   "name": "vocabulary",
   "version": "0.1.0",
   "description": "a SPA with vocabulary REST api",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack-dev-server --inline --hot --port 8210 --host 0.0.0.0",
+    "build": "export NODE_ENV=production && webpack --progress --hide-modules"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,15 @@
   "bugs": {
     "url": "https://github.com/aguegu/vocabulary-h5/issues"
   },
-  "homepage": "https://github.com/aguegu/vocabulary-h5#readme"
+  "homepage": "https://github.com/aguegu/vocabulary-h5#readme",
+  "devDependencies": {
+    "babel-core": "^6.3.17",
+    "babel-loader": "^6.2.0",
+    "babel-plugin-transform-runtime": "^6.3.13",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "babel-runtime": "^6.3.13",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  }
 }
