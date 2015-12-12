@@ -1,28 +1,15 @@
 <template lang="jade">
-  div.collection
-    a.collection-item(v-for="category in list") {{ category.title }}
-  router-view
-    pre {{ $data | json}}
+  navbar
 </template>
 
 <script>
-  import $ from 'webpack-zepto';
-  $.ajaxSettings.crossDomain = true;
+  import Navbar from './navbar.vue';
 
   export default {
-    data () {
-      return {
-        list: []
-      }
-    },
-
-    ready () {
-      var self = this;
-      $.getJSON('http://localhost:8200/categories', function(data) {
-        self.$set('list', data);
-      });
+    components: {
+      Navbar
     }
-  };
+  }
 </script>
 
 <style media="screen" lang="sass">
