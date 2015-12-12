@@ -1,11 +1,8 @@
-<template>
-  <div class="collection">
-    <a v-for="category in list" class="collection-item">
-      {{ category.title }}
-    </a>
-  </div>
-  <router-view></router-view>
-  <!-- <pre>{{ $data | json }}</pre> -->
+<template lang="jade">
+  div.collection
+    a.collection-item(v-for="category in list") {{ category.title }}
+  router-view
+    pre {{ $data | json}}
 </template>
 
 <script>
