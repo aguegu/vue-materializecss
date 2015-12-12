@@ -21,9 +21,13 @@
 
     ready () {
       var self = this;
-      $.getJSON('http://127.0.0.1:8200/categories', function(data) {
+      $.getJSON('http://localhost:8200/categories', function(data) {
         self.$set('list', data);
       });
     }
   };
 </script>
+
+<style media="screen" lang="sass">
+
+</style>

@@ -9,5 +9,7 @@ var router = new Router({
   history: false
 });
 
+require('./assets/style.scss');
+
 import App from './components/app.vue'
 router.start(App, 'app');

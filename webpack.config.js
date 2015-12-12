@@ -10,7 +10,9 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.vue$/, loader: 'vue'},
-      { test: /\.js$/, exclude: /node_modules/, loader: "babel"}
+      { test: /\.js$/, exclude: /node_modules/, loader: "babel"},
+      { test: /\.woff2?$|\.ttf$|\.eot$|\.svg$/, loader: 'file'},
+      { test: /\.scss$/, loaders: ["style", "css", "resolve-url", "sass?sourceMap"] }
     ]
   },
   babel: {
