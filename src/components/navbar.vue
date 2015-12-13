@@ -110,11 +110,4 @@ header
       a.waves-effect.waves-teal(href='http://materializecss.com/mobile.html') Mobile
     li.bold(class=(page == "Showcase" ? "active" : ""))
       a.waves-effect.waves-teal(href='showcase.html') Showcase
-
 </template>
-
-<script type="text/javascript">
-  export default {
-    name: 'Navbar'
-  };
-</script>
