@@ -14,7 +14,7 @@ module.exports = {
       { test: /\.woff2?$|\.ttf$|\.eot$|\.svg$/, loader: 'file'},
       { test: /\.scss$/, loaders: ["style", "css", "resolve-url", "sass?sourceMap"] },
       { test: /\.(png|jpg|gif)$/, loader: 'file'},
-      { test: /materialize-css\/bin\//, loader: 'imports?jQuery=jquery, $=jquery,hammerjs' },
+      // { test: /materialize-css\/bin\//, loader: 'imports?jQuery=jquery, $=jquery,hammerjs' },
     ]
   },
   babel: {

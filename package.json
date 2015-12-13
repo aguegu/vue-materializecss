@@ -42,7 +42,10 @@
   "dependencies": {
     "hammerjs": "^2.0.4",
     "jquery": "^2.1.4",
+    "jquery-easing": "0.0.1",
     "materialize-css": "^0.97.3",
+    "pickadate": "^3.5.6",
+    "velocity-animate": "^1.2.3",
     "vue": "^1.0.10",
     "vue-router": "^0.7.7",
     "webpack-zepto": "0.0.1"
