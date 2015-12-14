@@ -14,7 +14,7 @@ main
       .row
         .col.s12.m8.offset-m2
           br
-          img#responsive-img(src="../../assets/responsive.png")
+          img#responsive-img(src="http://materializecss.com/images/responsive.png")
       .row
         h3.col.s12.light.center.header Materialize simplifies life for developers and the users they serve.
       .row

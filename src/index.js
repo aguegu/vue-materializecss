@@ -10,11 +10,32 @@ var router = new Router({
 });
 
 import ViewHome from './components/views/home.vue'
+import ViewAbout from './components/views/about.vue'
+import ViewGettingStarted from './components/views/getting_started.vue'
+
+import ViewColor from './components/views/color.vue'
+import ViewGrid from './components/views/grid.vue'
+import ViewHelpers from './components/views/helpers.vue'
 
 router.map({
   '/home': {
     component: ViewHome
-  }
+  },
+  '/about': {
+    component: ViewAbout
+  },
+  '/getting_started': {
+    component: ViewGettingStarted
+  },
+  '/color': {
+    component: ViewColor
+  },
+  '/grid': {
+    component: ViewGrid
+  },
+  '/helpers': {
+    component: ViewHelpers
+  },
 });
 
 router.redirect({

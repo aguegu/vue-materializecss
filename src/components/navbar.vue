@@ -10,17 +10,17 @@ header
       i.mdi-navigation-menu
   ul#nav-mobile.side-nav.fixed
     li(class="logo")
-      a#logo-container.brand-logo(href='http://materializecss.com/')
+      a#logo-container.brand-logo(v-link="{path: '/home'}")
         img(src="~materialize-css/res/materialize.svg")
     li(class="search")
       div.search-wrapper.card
         input(id="search")
         i.material-icons search
         div.search-results
-    li.bold(class=(page == "About" ? "active" : ""))
-      a.waves-effect.waves-teal(href='about.html') About
-    li.bold(class=(page == "Getting Started" ? "active" : ""))
-      a.waves-effect.waves-teal(href='getting-started.html') Getting Started
+    li.bold(v-link="{path: '/about', activeClass: 'active'}")
+      a.waves-effect.waves-teal(v-link="{path: '/about'}") About
+    li.bold(v-link="{path: '/getting_started', activeClass: 'active'}")
+      a.waves-effect.waves-teal(v-link="{path: '/getting_started'}") Getting Started
 
     li.no-padding
       ul.collapsible.collapsible-accordion
@@ -29,12 +29,12 @@ header
             | CSS
           .collapsible-body
             ul
-              li(class=(page == "Color" ? "active" : ""))
-                a(href='color.html') Color
-              li(class=(page == "Grid" ? "active" : ""))
-                a(href='grid.html') Grid
-              li(class=(page == "Helpers" ? "active" : ""))
-                a(href='helpers.html') Helpers
+              li(v-link="{path: '/color', activeClass: 'active'}")
+                a(v-link="{path: '/color'}") Color
+              li(v-link="{path: '/gird', activeClass: 'active'}")
+                a(v-link="{path: '/grid'}") Grid
+              li(v-link="{path: '/helpers', activeClass: 'active'}")
+                a(v-link="{path: '/helpers'}") Helpers
               li(class=(page == "Media CSS" ? "active" : ""))
                 a(href='media-css.html') Media
               li(class=(page == "Sass" ? "active" : ""))
