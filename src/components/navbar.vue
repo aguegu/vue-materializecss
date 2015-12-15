@@ -45,8 +45,4 @@ header
                 a(v-link="{path: '/css/table'}") Table
               li(v-link="{path: '/css/typography', activeClass: 'active'}")
                 a(v-link="{path: '/css/typography'}") Typography
-        li.bold
-          {{ $route.path }}
-        li.bold
-          {{ $route.router }}
 </template>

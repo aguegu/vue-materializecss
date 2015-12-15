@@ -109,8 +109,8 @@
 var $ = require('jquery');
 
 export default {
-  ready () {
-    $('.toc-wrapper').pushpin({ top: $('#index-banner').height() });
+  ready () {    
+    $('.toc-wrapper').pushpin({ top: $('nav').height() });
     $('.scrollspy').scrollSpy();
   }
 };

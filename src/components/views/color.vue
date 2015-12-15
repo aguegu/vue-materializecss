@@ -415,6 +415,9 @@ export default {
         }
       });
     });
+
+    $('.toc-wrapper').pushpin({ top: $('nav').height() });
+    $('.scrollspy').scrollSpy();
   }
 }
 
