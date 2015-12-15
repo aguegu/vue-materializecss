@@ -57,11 +57,11 @@
 
         <div id="flow" class="section scrollspy">
           <h2 class="header">Flow Text</h2>
-          <a id="flow-toggle" class="btn waves-effect waves-light">Toggle flow-text</a>
+          <button class="btn waves-effect waves-light" v-on:click="isFlow = !isFlow">Toggle flow-text</button>
           <div id="flow-text-demo" class="card-panel">
-          <p class="flow-text">
-          One common flaw we've seen in many frameworks is a lack of support for truly responsive text. While elements on the page resize fluidly, text still resizes on a fixed basis. To ameliorate this problem, for text heavy pages, we've created a class that fluidly scales text size and line-height to optimize readability for the user. Line length stays between 45-80 characters and line height scales to be larger on smaller screens.</p>
-          <p class="flow-text">To see Flow Text in action, slowly resize your browser and watch the size of this text body change! Use the button above to toggle off/on flow-text to see the difference!</p>
+            <p v-bind:class="{'flow-text': isFlow}">
+            One common flaw we've seen in many frameworks is a lack of support for truly responsive text. While elements on the page resize fluidly, text still resizes on a fixed basis. To ameliorate this problem, for text heavy pages, we've created a class that fluidly scales text size and line-height to optimize readability for the user. Line length stays between 45-80 characters and line height scales to be larger on smaller screens.</p>
+            <p v-bind:class="{'flow-text': isFlow}">To see Flow Text in action, slowly resize your browser and watch the size of this text body change! Use the button above to toggle off/on flow-text to see the difference!</p>
           </div>
 
           <br>
@@ -103,9 +103,19 @@
 var $ = require('jquery');
 
 export default {
-  ready () {
-    $('.toc-wrapper').pushpin({ top: $('nav').height() });
-    $('.scrollspy').scrollSpy();
+  data () {
+    return {
+      isFlow: false
+    }
+  },
+  route: {
+    activate () {
+      this.$nextTick(() => {
+        $('.toc-wrapper').pushpin({ top: $('nav').height() });
+        $('.scrollspy').scrollSpy();
+      });
+    }
   }
 };
+
 </script>

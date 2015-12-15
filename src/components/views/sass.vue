@@ -168,9 +168,13 @@
 var $ = require('jquery');
 
 export default {
-  ready () {    
-    $('.toc-wrapper').pushpin({ top: $('nav').height() });
-    $('.scrollspy').scrollSpy();
+  route: {
+    activate () {
+      this.$nextTick(() => {
+        $('.toc-wrapper').pushpin({ top: $('nav').height() });
+        $('.scrollspy').scrollSpy();
+      });
+    }
   }
 };
 </script>

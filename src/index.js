@@ -49,6 +49,10 @@ router.redirect({
   '*': '/home'
 });
 
+router.beforeEach(function () {
+  window.scrollTo(0, 0)
+});
+
 require('./assets/style.scss');
 
 import App from './components/app.vue'

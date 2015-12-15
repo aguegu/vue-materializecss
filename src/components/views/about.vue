@@ -123,7 +123,6 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </main>
@@ -133,9 +132,16 @@
 var $ = require('jquery');
 
 export default {
-  ready () {
-    $('.toc-wrapper').pushpin({ top: $('#index-banner').height() });
-    $('.scrollspy').scrollSpy();
+  route: {
+    activate () {
+      this.$nextTick(() => {
+        $('.toc-wrapper').pushpin({ top: $('#index-banner').height() });
+        $('.scrollspy').scrollSpy();
+      });
+    },
+    deactivate() {
+      console.log('deactivate hook');
+    }
   }
 };
 </script>
