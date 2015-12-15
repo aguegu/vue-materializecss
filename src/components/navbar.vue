@@ -1,7 +1,6 @@
 <template lang="jade">
 header
-
-  nav.top-nav(v-if="$route.path.indexOf('/css/') === 0")
+  nav.top-nav(v-if="$route.path.indexOf('/css/') === 0 || $route.path.indexOf('/components/') === 0")
     .container
       .nav-wrapper
         a.page-title {{ $route.path.split('/')[2] }}

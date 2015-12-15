@@ -43,6 +43,42 @@ router.map({
   '/css/typography': {
     component: require('./components/views/css/typography.vue')
   },
+  '/components/badges': {
+    component: require('./components/views/components/badges.vue')
+  },
+  '/components/buttons': {
+    component: require('./components/views/components/buttons.vue')
+  },
+  '/components/breadcrumbs': {
+    component: require('./components/views/components/breadcrumbs.vue')
+  },
+  '/components/cards': {
+    component: require('./components/views/components/cards.vue')
+  },
+  '/components/chips': {
+    component: require('./components/views/components/chips.vue')
+  },
+  '/components/collections': {
+    component: require('./components/views/components/collections.vue')
+  },
+  '/components/footer': {
+    component: require('./components/views/components/footer.vue')
+  },
+  '/components/forms': {
+    component: require('./components/views/components/forms.vue')
+  },
+  '/components/icons': {
+    component: require('./components/views/components/icons.vue')
+  },
+  '/components/navbar': {
+    component: require('./components/views/components/navbar.vue')
+  },
+  '/components/pagination': {
+    component: require('./components/views/components/pagination.vue')
+  },
+  '/components/preloader': {
+    component: require('./components/views/components/preloader.vue')
+  }
 });
 
 router.redirect({
