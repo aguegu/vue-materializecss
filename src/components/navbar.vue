@@ -45,4 +45,33 @@ header
                 a(v-link="{path: '/css/table'}") Table
               li(v-link="{path: '/css/typography', activeClass: 'active'}")
                 a(v-link="{path: '/css/typography'}") Typography
+        li.bold
+          a.collapsible-header.waves-effect.waves-teal(v-link="{path: '/components', activeClass: 'active'}")
+            | Components
+          .collapsible-body
+            ul
+              li(v-link="{path: '/components/badges', activeClass: 'active'}")
+                a(v-link="{path: '/components/badges'}") Badges
+              li(v-link="{path: '/components/buttons', activeClass: 'active'}")
+                a(v-link="{path: '/components/buttons'}") Buttons
+              li(v-link="{path: '/components/breadcrumbs', activeClass: 'active'}")
+                a(v-link="{path: '/components/breadcrumbs'}") Breadcrumbs
+              li(v-link="{path: '/components/cards', activeClass: 'active'}")
+                a(v-link="{path: '/components/cards'}") Cards
+              li(v-link="{path: '/components/chips', activeClass: 'active'}")
+                a(v-link="{path: '/components/chips'}") Chips
+              li(v-link="{path: '/components/collections', activeClass: 'active'}")
+                a(v-link="{path: '/components/collections'}") Collections
+              li(v-link="{path: '/components/footer', activeClass: 'active'}")
+                a(v-link="{path: '/components/footer'}") Footer
+              li(v-link="{path: '/components/forms', activeClass: 'active'}")
+                a(v-link="{path: '/components/forms'}") Forms
+              li(v-link="{path: '/components/icons', activeClass: 'active'}")
+                a(v-link="{path: '/components/icons'}") Icons
+              li(v-link="{path: '/components/navbar', activeClass: 'active'}")
+                a(v-link="{path: '/components/navbar'}") Navbar
+              li(v-link="{path: '/components/pagination', activeClass: 'active'}")
+                a(v-link="{path: '/components/pagination'}") Pagination
+              li(v-link="{path: '/components/preloader', activeClass: 'active'}")
+                a(v-link="{path: '/components/preloader'}") Preloader
 </template>

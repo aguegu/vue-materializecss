@@ -20,28 +20,28 @@ router.map({
     component: require('./components/views/getting_started.vue')
   },
   '/css/color': {
-    component: require('./components/views/color.vue')
+    component: require('./components/views/css/color.vue')
   },
   '/css/grid': {
-    component: require('./components/views/grid.vue')
+    component: require('./components/views/css/grid.vue')
   },
   '/css/helpers': {
-    component: require('./components/views/helpers.vue')
+    component: require('./components/views/css/helpers.vue')
   },
   '/css/css_media': {
-    component: require('./components/views/css_media.vue')
+    component: require('./components/views/css/css_media.vue')
   },
   '/css/sass': {
-    component: require('./components/views/sass.vue')
+    component: require('./components/views/css/sass.vue')
   },
   '/css/shadow': {
-    component: require('./components/views/shadow.vue')
+    component: require('./components/views/css/shadow.vue')
   },
   '/css/table': {
-    component: require('./components/views/table.vue')
+    component: require('./components/views/css/table.vue')
   },
   '/css/typography': {
-    component: require('./components/views/typography.vue')
+    component: require('./components/views/css/typography.vue')
   },
 });
 
