@@ -1,12 +1,12 @@
 <template lang="jade">
 header
-  if no_nav == false
-    nav.top-nav
-      .container
-        .nav-wrapper
-          a.page-title #{page}
+
+  nav.top-nav(v-if="$route.path.indexOf('/css/') === 0")
+    .container
+      .nav-wrapper
+        a.page-title {{ $route.path.split('/')[2] }}
   .container
-    a.button-collapse.top-nav(href='#', data-activates='nav-mobile', class=(no_nav == false ? "full hide-on-large-only" : "" + "waves-effect waves-light circle hide-on-large-only"))
+    a.button-collapse.top-nav.hide-on-large-only(href='#', data-activates='nav-mobile', v-bind:class="{'full': $route.path.indexOf('/css/') === 0}")
       i.mdi-navigation-menu
   ul#nav-mobile.side-nav.fixed
     li(class="logo")
@@ -25,24 +25,28 @@ header
     li.no-padding
       ul.collapsible.collapsible-accordion
         li.bold
-          a.collapsible-header(class=(page == "Sass" || page == "Typography" || page == "Color" || page == "Shadow" || page == "Grid" || page == "Media CSS" || page == "Table" || page == "Helpers" ? "active" : "")+" waves-effect waves-teal")
+          a.collapsible-header.waves-effect.waves-teal(v-link="{path: '/css', activeClass: 'active'}")
             | CSS
           .collapsible-body
             ul
-              li(v-link="{path: '/color', activeClass: 'active'}")
-                a(v-link="{path: '/color'}") Color
-              li(v-link="{path: '/gird', activeClass: 'active'}")
-                a(v-link="{path: '/grid'}") Grid
-              li(v-link="{path: '/helpers', activeClass: 'active'}")
-                a(v-link="{path: '/helpers'}") Helpers
-              li(v-link="{path: '/css_media', activeClass: 'active'}")
-                a(v-link="{path: '/css_media'}") Media
-              li(v-link="{path: '/sass', activeClass: 'active'}")
-                a(v-link="{path: '/sass'}") Sass
-              li(v-link="{path: '/shadow', activeClass: 'active'}")
-                a(v-link="{path: '/shadow'}") Shadow
-              li(v-link="{path: '/table', activeClass: 'active'}")
-                a(v-link="{path: '/table'}") Table
-              li(v-link="{path: '/typography', activeClass: 'active'}")
-                a(v-link="{path: '/typography'}") Typography
+              li(v-link="{path: '/css/color', activeClass: 'active'}")
+                a(v-link="{path: '/css/color'}") Color
+              li(v-link="{path: '/css/grid', activeClass: 'active'}")
+                a(v-link="{path: '/css/grid'}") Grid
+              li(v-link="{path: '/css/helpers', activeClass: 'active'}")
+                a(v-link="{path: '/css/helpers'}") Helpers
+              li(v-link="{path: '/css/css_media', activeClass: 'active'}")
+                a(v-link="{path: '/css/css_media'}") Media
+              li(v-link="{path: '/css/sass', activeClass: 'active'}")
+                a(v-link="{path: '/css/sass'}") Sass
+              li(v-link="{path: '/css/shadow', activeClass: 'active'}")
+                a(v-link="{path: '/css/shadow'}") Shadow
+              li(v-link="{path: '/css/table', activeClass: 'active'}")
+                a(v-link="{path: '/css/table'}") Table
+              li(v-link="{path: '/css/typography', activeClass: 'active'}")
+                a(v-link="{path: '/css/typography'}") Typography
+        li.bold
+          {{ $route.path }}
+        li.bold
+          {{ $route.router }}
 </template>
