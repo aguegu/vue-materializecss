@@ -35,79 +35,14 @@ header
                 a(v-link="{path: '/grid'}") Grid
               li(v-link="{path: '/helpers', activeClass: 'active'}")
                 a(v-link="{path: '/helpers'}") Helpers
-              li(class=(page == "Media CSS" ? "active" : ""))
-                a(href='media-css.html') Media
-              li(class=(page == "Sass" ? "active" : ""))
-                a(href='sass.html') Sass
-              li(class=(page == "Shadow" ? "active" : ""))
-                a(href='shadow.html') Shadow
-              li(class=(page == "Table" ? "active" : ""))
-                a(href='table.html') Table
-              li(class=(page == "Typography" ? "active" : ""))
-                a(href='typography.html') Typography
-        li.bold
-          a.collapsible-header(class=(page == "Forms" || page == "Buttons" || page == "Navbar" || page == "Cards" || page == "Chips" || page == "Preloader" || page == "Pagination" || page == "Collections" || page == "Badges" || page == "Breadcrumbs" || page == "Footer" ? "active" : "" || page == "Icons" ? "active" : "")+" waves-effect waves-teal")
-            | Components
-          .collapsible-body
-            ul
-              li(class=(page == "Badges" ? "active" : ""))
-                a(href='badges.html') Badges
-              li(class=(page == "Buttons" ? "active" : ""))
-                a(href='buttons.html') Buttons
-              li(class=(page == "Breadcrumbs" ? "active" : ""))
-                a(href='breadcrumbs.html') Breadcrumbs
-              li(class=(page == "Cards" ? "active" : ""))
-                a(href='cards.html') Cards
-              li(class=(page == "Chips" ? "active" : ""))
-                a(href='chips.html') Chips
-              li(class=(page == "Collections" ? "active" : ""))
-                a(href='collections.html') Collections
-              li(class=(page == "Footer" ? "active" : ""))
-                a(href='footer.html') Footer
-              li(class=(page == "Forms" ? "active" : ""))
-                a(href='forms.html') Forms
-              li(class=(page == "Icons" ? "active" : ""))
-                a(href='icons.html') Icons
-              li(class=(page == "Navbar" ? "active" : ""))
-                a(href='navbar.html') Navbar
-              li(class=(page == "Pagination" ? "active" : ""))
-                a(href='pagination.html') Pagination
-              li(class=(page == "Preloader" ? "active" : ""))
-                a(href='preloader.html') Preloader
-        li.bold
-          a.collapsible-header(class=(page == "Dialogs" || page == "Modals" || page == "Dropdown" || page == "Tabs" || page == "ScrollFire" || page == "Scrollspy" || page == "SideNav" || page == "Pushpin" || page == "Waves" || page == "Media" || page == "Transitions" || page == "Parallax" || page == "Collapsible" ? "active" : "")+" waves-effect waves-teal")
-            | JavaScript
-          .collapsible-body
-            ul
-              li(class=(page == "Collapsible" ? "active" : ""))
-                a(href='collapsible.html') Collapsible
-              li(class=(page == "Dialogs" ? "active" : ""))
-                a(href='dialogs.html') Dialogs
-              li(class=(page == "Dropdown" ? "active" : ""))
-                a(href='dropdown.html') Dropdown
-              li(class=(page == "Media" ? "active" : ""))
-                a(href='media.html') Media
-              li(class=(page == "Modals" ? "active" : ""))
-                a(href='modals.html') Modals
-              li(class=(page == "Parallax" ? "active" : ""))
-                a(href='parallax.html') Parallax
-              li(class=(page == "Pushpin" ? "active" : ""))
-                a(href='pushpin.html') Pushpin
-              li(class=(page == "ScrollFire" ? "active" : ""))
-                a(href='scrollfire.html') ScrollFire
-              li(class=(page == "Scrollspy" ? "active" : ""))
-                a(href='scrollspy.html') Scrollspy
-              li(class=(page == "SideNav" ? "active" : ""))
-                a(href='side-nav.html') SideNav
-              li(class=(page == "Tabs" ? "active" : ""))
-                a(href='tabs.html') Tabs
-              li(class=(page == "Transitions" ? "active" : ""))
-                a(href='transitions.html') Transitions
-              li(class=(page == "Waves" ? "active" : ""))
-                a(href='waves.html') Waves
-
-    li.bold(class=(page == "Mobile" ? "active" : ""))
-      a.waves-effect.waves-teal(href='http://materializecss.com/mobile.html') Mobile
-    li.bold(class=(page == "Showcase" ? "active" : ""))
-      a.waves-effect.waves-teal(href='showcase.html') Showcase
+              li(v-link="{path: '/css_media', activeClass: 'active'}")
+                a(v-link="{path: '/css_media'}") Media
+              li(v-link="{path: '/sass', activeClass: 'active'}")
+                a(v-link="{path: '/sass'}") Sass
+              li(v-link="{path: '/shadow', activeClass: 'active'}")
+                a(v-link="{path: '/shadow'}") Shadow
+              li(v-link="{path: '/table', activeClass: 'active'}")
+                a(v-link="{path: '/table'}") Table
+              li(v-link="{path: '/typography', activeClass: 'active'}")
+                a(v-link="{path: '/typography'}") Typography
 </template>

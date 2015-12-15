@@ -9,32 +9,39 @@ var router = new Router({
   history: false
 });
 
-import ViewHome from './components/views/home.vue'
-import ViewAbout from './components/views/about.vue'
-import ViewGettingStarted from './components/views/getting_started.vue'
-
-import ViewColor from './components/views/color.vue'
-import ViewGrid from './components/views/grid.vue'
-import ViewHelpers from './components/views/helpers.vue'
-
 router.map({
   '/home': {
-    component: ViewHome
+    component: require('./components/views/home.vue')
   },
   '/about': {
-    component: ViewAbout
+    component: require('./components/views/about.vue')
   },
   '/getting_started': {
-    component: ViewGettingStarted
+    component: require('./components/views/getting_started.vue')
   },
   '/color': {
-    component: ViewColor
+    component: require('./components/views/color.vue')
   },
   '/grid': {
-    component: ViewGrid
+    component: require('./components/views/grid.vue')
   },
   '/helpers': {
-    component: ViewHelpers
+    component: require('./components/views/helpers.vue')
+  },
+  '/css_media': {
+    component: require('./components/views/css_media.vue')
+  },
+  '/sass': {
+    component: require('./components/views/sass.vue')
+  },
+  '/shadow': {
+    component: require('./components/views/shadow.vue')
+  },
+  '/table': {
+    component: require('./components/views/table.vue')
+  },
+  '/typography': {
+    component: require('./components/views/typography.vue')
   },
 });
 
