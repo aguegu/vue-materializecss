@@ -117,7 +117,16 @@ router.map({
   },
   '/javascript/waves': {
     component: require('./components/views/javascript/waves.vue')
+  },
+
+  '/mobile': {
+    component: require('./components/views/mobile.vue')
+  },
+
+  '/showcase': {
+    component: require('./components/views/showcase.vue')
   }
+
 });
 
 router.redirect({

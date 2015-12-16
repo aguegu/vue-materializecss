@@ -1,9 +1,9 @@
 <template lang="jade">
 header
-  nav.top-nav(v-if="$route.path.indexOf('/css/') === 0 || $route.path.indexOf('/components/') === 0")
+  nav.top-nav(v-if="$route.path.indexOf('/css/') === 0 || $route.path.indexOf('/components/') === 0 || $route.path.indexOf('/javascript/') === 0 || $route.path === '/mobile' || $route.path === '/showcase'")
     .container
       .nav-wrapper
-        a.page-title {{ $route.path.split('/')[2] }}
+        a.page-title {{ $route.path.split('/')[2] || $route.path }}
   .container
     a.button-collapse.top-nav.hide-on-large-only(href='#', data-activates='nav-mobile', v-bind:class="{'full': $route.path.indexOf('/css/') === 0}")
       i.mdi-navigation-menu
@@ -104,4 +104,9 @@ header
                 a(v-link="{path: '/javascript/transitions'}") Transitions
               li(v-link="{path: '/javascript/waves', activeClass: 'active'}")
                 a(v-link="{path: '/javascript/waves'}") Waves
+    li.bold(v-link="{path: '/mobile', activeClass: 'active'}")
+      a.waves-effect.waves-teal(v-link="{path: '/mobile'}") Mobile
+    li.bold(v-link="{path: '/showcase', activeClass: 'active'}")
+      a.waves-effect.waves-teal(v-link="{path: '/showcase'}") Showcase
+
 </template>
