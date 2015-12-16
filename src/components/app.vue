@@ -31,13 +31,16 @@ foot
 
   require("materialize-css/js/jquery.hammer.js");
   require("imports?$=jquery!materialize-css/js/global.js");
-  require("materialize-css/js/collapsible.js");
-  require("materialize-css/js/dropdown.js");
+  // require("materialize-css/js/collapsible.js");
+  require("../javascripts/collapsible.js");
+  // require("materialize-css/js/dropdown.js");
+  require("../javascripts/dropdown.js");
   require("materialize-css/js/leanModal.js");
   require("materialize-css/js/materialbox.js");
   require("materialize-css/js/parallax.js");
   require("materialize-css/js/tabs.js");
-  require("materialize-css/js/tooltip.js");
+  // require("materialize-css/js/tooltip.js");
+  require("../javascripts/tooltip.js");
   require("materialize-css/js/waves.js");
   require("materialize-css/js/toasts.js");
 
@@ -183,8 +186,8 @@ foot
     // $('.scrollspy').scrollSpy();
     $('.button-collapse').sideNav({'edge': 'left'});
     // $('.datepicker').pickadate({selectYears: 20});
-    // $('select').not('.disabled').material_select();
-
+    // $('select').not('.disabled').material_select();    
+    $('#nav-mobile .collapsible').collapsible();
   }); // end of document ready
 
 </script>
