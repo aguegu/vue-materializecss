@@ -1,7 +1,7 @@
 {
-  "name": "vocabulary",
+  "name": "vue-materilizecss",
   "version": "0.1.0",
-  "description": "a SPA with vocabulary REST api",
+  "description": "materilizecss.com with webpack and vue",
   "main": "src/index.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --hot --port 8210 --host 0.0.0.0",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/aguegu/vocabulary-h5.git"
+    "url": "git+s://git@github.com/aguegu/vue-materilizecss.git"
   },
   "author": "aGuegu <weihong.guan@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/aguegu/vocabulary-h5/issues"
+    "url": "https://github.com/aguegu/vue-materilizecss/issues"
   },
-  "homepage": "https://github.com/aguegu/vocabulary-h5#readme",
+  "homepage": "https://github.com/aguegu/vue-materilizecss#readme",
   "devDependencies": {
     "babel-core": "^6.3.17",
     "babel-loader": "^6.2.0",
