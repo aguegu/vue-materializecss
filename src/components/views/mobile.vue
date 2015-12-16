@@ -43,3 +43,18 @@
   </main>
 
 </template>
+
+<script type="text/javascript">
+var $ = require('jquery');
+
+export default {
+  route: {
+    activate () {
+      this.$nextTick(() => {
+        $('.toc-wrapper').pushpin({ top: $('nav').height() });
+        $('.scrollspy').scrollSpy();
+      });
+    }
+  }
+};
+</script>
