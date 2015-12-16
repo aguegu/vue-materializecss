@@ -78,6 +78,45 @@ router.map({
   },
   '/components/preloader': {
     component: require('./components/views/components/preloader.vue')
+  },
+  '/javascript/collapsible': {
+    component: require('./components/views/javascript/collapsible.vue')
+  },
+  '/javascript/dialogs': {
+    component: require('./components/views/javascript/dialogs.vue')
+  },
+  '/javascript/dropdown': {
+    component: require('./components/views/javascript/dropdown.vue')
+  },
+  '/javascript/media': {
+    component: require('./components/views/javascript/media.vue')
+  },
+  '/javascript/modals': {
+    component: require('./components/views/javascript/modals.vue')
+  },
+  '/javascript/parallax': {
+    component: require('./components/views/javascript/parallax.vue')
+  },
+  '/javascript/pushpin': {
+    component: require('./components/views/javascript/pushpin.vue')
+  },
+  '/javascript/scrollfire': {
+    component: require('./components/views/javascript/scrollfire.vue')
+  },
+  '/javascript/scrollspy': {
+    component: require('./components/views/javascript/scrollspy.vue')
+  },
+  '/javascript/sidenav': {
+    component: require('./components/views/javascript/sidenav.vue')
+  },
+  '/javascript/tabs': {
+    component: require('./components/views/javascript/tabs.vue')
+  },
+  '/javascript/transitions': {
+    component: require('./components/views/javascript/transitions.vue')
+  },
+  '/javascript/waves': {
+    component: require('./components/views/javascript/waves.vue')
   }
 });
 

@@ -73,4 +73,35 @@ header
                 a(v-link="{path: '/components/pagination'}") Pagination
               li(v-link="{path: '/components/preloader', activeClass: 'active'}")
                 a(v-link="{path: '/components/preloader'}") Preloader
+        li.bold
+          a.collapsible-header.waves-effect.waves-teal(v-link="{path: '/javascript', activeClass: 'active'}")
+            | Javascript
+          .collapsible-body
+            ul
+              li(v-link="{path: '/javascript/collapsible', activeClass: 'active'}")
+                a(v-link="{path: '/javascript/collapsible'}") Collapsible
+              li(v-link="{path: '/javascript/dialogs', activeClass: 'active'}")
+                a(v-link="{path: '/javascript/dialogs'}") Dialogs
+              li(v-link="{path: '/javascript/dropdown', activeClass: 'active'}")
+                a(v-link="{path: '/javascript/dropdown'}") Dropdown
+              li(v-link="{path: '/javascript/media', activeClass: 'active'}")
+                a(v-link="{path: '/javascript/media'}") Media
+              li(v-link="{path: '/javascript/modals', activeClass: 'active'}")
+                a(v-link="{path: '/javascript/modals'}") Modals
+              li(v-link="{path: '/javascript/parallax', activeClass: 'active'}")
+                a(v-link="{path: '/javascript/parallax'}") Parallax
+              li(v-link="{path: '/javascript/pushpin', activeClass: 'active'}")
+                a(v-link="{path: '/javascript/pushpin'}") Pushpin
+              li(v-link="{path: '/javascript/scrollfire', activeClass: 'active'}")
+                a(v-link="{path: '/javascript/scrollfire'}") ScrollFire
+              li(v-link="{path: '/javascript/scrollspy', activeClass: 'active'}")
+                a(v-link="{path: '/javascript/scrollspy'}") Scrollspy
+              li(v-link="{path: '/javascript/sidenav', activeClass: 'active'}")
+                a(v-link="{path: '/javascript/sidenav'}") SideNav
+              li(v-link="{path: '/javascript/tabs', activeClass: 'active'}")
+                a(v-link="{path: '/javascript/tabs'}") Tabs
+              li(v-link="{path: '/javascript/transitions', activeClass: 'active'}")
+                a(v-link="{path: '/javascript/transitions'}") Transitions
+              li(v-link="{path: '/javascript/waves', activeClass: 'active'}")
+                a(v-link="{path: '/javascript/waves'}") Waves
 </template>
