@@ -314,18 +314,18 @@
               <div class="input-field col s12 m6">
                 <select class="icons">
                   <option value="" disabled selected>Choose your option</option>
-                  <option value="" data-icon="images/sample-1.jpg" class="circle">example 1</option>
-                  <option value="" data-icon="images/office.jpg" class="circle">example 2</option>
-                  <option value="" data-icon="images/yuna.jpg" class="circle">example 1</option>
+                  <option value="" data-icon="http://materializecss.com/images/sample-1.jpg" class="circle">example 1</option>
+                  <option value="" data-icon="http://materializecss.com/images/office.jpg" class="circle">example 2</option>
+                  <option value="" data-icon="http://materializecss.com/images/yuna.jpg" class="circle">example 1</option>
                 </select>
                 <label>Images in select</label>
               </div>
               <div class="input-field col s12 m6">
                 <select class="icons">
                   <option value="" disabled selected>Choose your option</option>
-                  <option value="" data-icon="images/sample-1.jpg" class="left circle">example 1</option>
-                  <option value="" data-icon="images/office.jpg" class="left circle">example 2</option>
-                  <option value="" data-icon="images/yuna.jpg" class="left circle">example 3</option>
+                  <option value="" data-icon="http://materializecss.com/images/sample-1.jpg" class="left circle">example 1</option>
+                  <option value="" data-icon="http://materializecss.com/images/office.jpg" class="left circle">example 2</option>
+                  <option value="" data-icon="http://materializecss.com/images/yuna.jpg" class="left circle">example 3</option>
                 </select>
                 <label>Images in select</label>
               </div>
@@ -383,18 +383,18 @@
   &lt;div class="input-field col s12 m6">
     &lt;select class="icons">
       &lt;option value="" disabled selected>Choose your option&lt;/option>
-      &lt;option value="" data-icon="images/sample-1.jpg" class="circle">example 1&lt;/option>
-      &lt;option value="" data-icon="images/office.jpg" class="circle">example 2&lt;/option>
-      &lt;option value="" data-icon="images/yuna.jpg" class="circle">example 1&lt;/option>
+      &lt;option value="" data-icon="http://materializecss.com/images/sample-1.jpg" class="circle">example 1&lt;/option>
+      &lt;option value="" data-icon="http://materializecss.com/images/office.jpg" class="circle">example 2&lt;/option>
+      &lt;option value="" data-icon="http://materializecss.com/images/yuna.jpg" class="circle">example 1&lt;/option>
     &lt;/select>
     &lt;label>Images in select&lt;/label>
   &lt;/div>
   &lt;div class="input-field col s12 m6">
     &lt;select class="icons">
       &lt;option value="" disabled selected>Choose your option&lt;/option>
-      &lt;option value="" data-icon="images/sample-1.jpg" class="left circle">example 1&lt;/option>
-      &lt;option value="" data-icon="images/office.jpg" class="left circle">example 2&lt;/option>
-      &lt;option value="" data-icon="images/yuna.jpg" class="left circle">example 3&lt;/option>
+      &lt;option value="" data-icon="http://materializecss.com/images/sample-1.jpg" class="left circle">example 1&lt;/option>
+      &lt;option value="" data-icon="http://materializecss.com/images/office.jpg" class="left circle">example 2&lt;/option>
+      &lt;option value="" data-icon="http://materializecss.com/images/yuna.jpg" class="left circle">example 3&lt;/option>
     &lt;/select>
     &lt;label>Images in select&lt;/label>
   &lt;/div>
@@ -837,7 +837,14 @@ export default {
       this.$nextTick(() => {
         $('.toc-wrapper').pushpin({ top: $('nav').height() });
         $('.scrollspy').scrollSpy();
+        $('.slider').slider({full_width: true});
+        $('select').not('.disabled').material_select();
+        $('.datepicker').pickadate({selectYears: 20});
+        $('input, textarea').characterCounter();
       });
+    },
+    deactivate () {
+      $('select').not('.disabled').material_select('destroy');
     }
   }
 };

@@ -35,12 +35,12 @@
 @import "~materialize-css/sass/components/preloader";
 @import "~materialize-css/sass/components/slider";
 
-// @import "~materialize-css/sass/components/date_picker/default";
-// @import "~materialize-css/sass/components/date_picker/default.date";
-// @import "~materialize-css/sass/components/date_picker/default.time";
-@import "~pickadate/lib/themes/default.css";
-@import "~pickadate/lib/themes/default.date.css";
-@import "~pickadate/lib/themes/default.time.css";
+@import "~materialize-css/sass/components/date_picker/default";
+@import "~materialize-css/sass/components/date_picker/default.date";
+@import "~materialize-css/sass/components/date_picker/default.time";
+// @import "~pickadate/lib/themes/default.css";
+// @import "~pickadate/lib/themes/default.date.css";
+// @import "~pickadate/lib/themes/default.time.css";
 
 @import "~materialize-css/sass/style";
 

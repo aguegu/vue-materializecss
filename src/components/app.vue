@@ -141,7 +141,7 @@ foot
     //     }
     //   });
     // }
-    
+
 //    Toggle Containers on page
     var toggleContainersButton = $('#container-toggle-button');
     toggleContainersButton.click(function(){
@@ -177,13 +177,13 @@ foot
 
 
     // Plugin initialization
-    $('.slider').slider({full_width: true});
+    // $('.slider').slider({full_width: true});
     $('.parallax').parallax();
     $('.modal-trigger').leanModal();
     // $('.scrollspy').scrollSpy();
     $('.button-collapse').sideNav({'edge': 'left'});
-    $('.datepicker').pickadate({selectYears: 20});
-    $('select').not('.disabled').material_select();
+    // $('.datepicker').pickadate({selectYears: 20});
+    // $('select').not('.disabled').material_select();
 
   }); // end of document ready
 

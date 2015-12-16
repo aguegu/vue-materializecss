@@ -391,7 +391,8 @@ export default {
     activate () {
       this.$nextTick(() => {
         $('.toc-wrapper').pushpin({ top: $('nav').height() });
-        $('.scrollspy').scrollSpy();
+        $('.scrollspy').scrollSpy();        
+        $('.dropdown-button').dropdown();
       });
     }
   }
