@@ -109,6 +109,8 @@
           verticalOffset -= activates.innerHeight();
         }
       }
+      
+      var leftPosition;
 
       // Handle edge alignment
       if (currAlignment === 'left') {

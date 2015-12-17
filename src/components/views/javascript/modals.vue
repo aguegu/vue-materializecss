@@ -221,6 +221,7 @@ export default {
       this.$nextTick(() => {
         $('.toc-wrapper').pushpin({ top: $('nav').height() });
         $('.scrollspy').scrollSpy();
+        $('.modal-trigger').leanModal();
       });
     }
   }

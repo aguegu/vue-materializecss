@@ -111,6 +111,7 @@ export default {
       this.$nextTick(() => {
         $('.toc-wrapper').pushpin({ top: $('nav').height() });
         $('.scrollspy').scrollSpy();
+        $('ul.tabs').tabs();
       });
     }
   }

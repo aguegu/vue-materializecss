@@ -10,7 +10,7 @@
 
       <h4>Introduction</h4>
         <p class="caption">Waves is an external library that we've included in Materialize to allow us to create the ink effect outlined in Material Design</p>
-      <a class="waves-effect waves-light btn" href="#!">Wave</a>
+        <button class="waves-effect waves-light btn">Wave</button>
     </div>
 
 
@@ -34,17 +34,17 @@
           <h5 class="light">Available Colors</h5>
           <p>To use these, just add the corresponding class to your button. Play around with changing the background color of butons and the waves effect to create something cool!</p>
           <pre><code class="language-markup">
-    &lt;a href="#!" class="btn waves-effect waves-teal">Send&lt;/a>
+    &lt;button class="btn waves-effect waves-teal">Send&lt;/a>
           </code></pre>
           <div class="collection waves-color-demo">
-            <div class="collection-item">Default<a href="#!" class="waves-effect btn secondary-content">Send</a></div>
-            <div class="collection-item"><code class="language-markup">waves-light</code><a href="#!" class="waves-effect waves-light btn secondary-content">Send</a></div>
-            <div class="collection-item"><code class="language-markup">waves-red</code><a href="#!" class="waves-effect waves-red btn secondary-content">Send</a></div>
-            <div class="collection-item"><code class="language-markup">waves-yellow</code><a href="#!" class="waves-effect waves-yellow btn secondary-content">Send</a></div>
-            <div class="collection-item"><code class="language-markup">waves-orange</code><a href="#!" class="waves-effect waves-orange btn secondary-content">Send</a></div>
-            <div class="collection-item"><code class="language-markup">waves-purple</code><a href="#!" class="waves-effect waves-purple btn secondary-content">Send</a></div>
-            <div class="collection-item"><code class="language-markup">waves-green</code><a href="#!" class="waves-effect waves-green btn secondary-content">Send</a></div>
-            <div class="collection-item"><code class="language-markup">waves-teal</code><a href="#!" class="waves-effect waves-teal btn secondary-content">Send</a></div>
+            <div class="collection-item">Default<button class="waves-effect btn secondary-content">Send</button></div>
+            <div class="collection-item"><code class="language-markup">waves-light</code><button class="waves-effect waves-light btn secondary-content">Send</button></div>
+            <div class="collection-item"><code class="language-markup">waves-red</code><button class="waves-effect waves-red btn secondary-content">Send</button></div>
+            <div class="collection-item"><code class="language-markup">waves-yellow</code><button class="waves-effect waves-yellow btn secondary-content">Send</button></div>
+            <div class="collection-item"><code class="language-markup">waves-orange</code><button class="waves-effect waves-orange btn secondary-content">Send</button></div>
+            <div class="collection-item"><code class="language-markup">waves-purple</code><button class="waves-effect waves-purple btn secondary-content">Send</button></div>
+            <div class="collection-item"><code class="language-markup">waves-green</code><button class="waves-effect waves-green btn secondary-content">Send</button></div>
+            <div class="collection-item"><code class="language-markup">waves-teal</code><button class="waves-effect waves-teal btn secondary-content">Send</button></div>
           </div>
         </div>
 
@@ -75,13 +75,13 @@
          <div class="col s12">
           <h5 class="light">HTML Markup</h5>
           <pre><code class="language-markup">
-  &lt;a href="#!" class="waves-effect waves-circle waves-light btn-floating secondary-content">
+  &lt;button class="waves-effect waves-circle waves-light btn-floating secondary-content">
     &lt;i class="material-icons">add&lt;/i>
-  &lt;/a>
+  &lt;/button>
           </code></pre>
           <div class="collection waves-color-demo">
-            <div class="collection-item">Default<a href="#!" class="waves-effect waves-circle btn-floating secondary-content"><i class="material-icons">add</i></a></div>
-            <div class="collection-item"><code class="language-markup">waves-light</code><a href="#!" class="waves-effect waves-circle waves-light btn-floating secondary-content"><i class="material-icons">add</i></a></div>
+            <div class="collection-item">Default<button class="waves-effect waves-circle btn-floating secondary-content"><i class="material-icons">add</i></a></div>
+            <div class="collection-item"><code class="language-markup">waves-light</code><button class="waves-effect waves-circle waves-light btn-floating secondary-content"><i class="material-icons">add</i></a></div>
           </div>
         </div>
       </div>

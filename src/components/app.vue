@@ -36,9 +36,11 @@ foot
   // require("materialize-css/js/dropdown.js");
   require("../javascripts/dropdown.js");
   require("materialize-css/js/leanModal.js");
-  require("materialize-css/js/materialbox.js");
+  // require("materialize-css/js/materialbox.js");
+  require("../javascripts/materialbox.js");
   require("materialize-css/js/parallax.js");
   require("materialize-css/js/tabs.js");
+  require("../javascripts/tabs.js");
   // require("materialize-css/js/tooltip.js");
   require("../javascripts/tooltip.js");
   require("materialize-css/js/waves.js");
@@ -186,7 +188,7 @@ foot
     // $('.scrollspy').scrollSpy();
     $('.button-collapse').sideNav({'edge': 'left'});
     // $('.datepicker').pickadate({selectYears: 20});
-    // $('select').not('.disabled').material_select();    
+    // $('select').not('.disabled').material_select();
     $('#nav-mobile .collapsible').collapsible();
   }); // end of document ready
 

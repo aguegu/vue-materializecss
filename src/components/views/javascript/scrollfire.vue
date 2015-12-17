@@ -125,6 +125,14 @@ export default {
       this.$nextTick(() => {
         $('.toc-wrapper').pushpin({ top: $('nav').height() });
         $('.scrollspy').scrollSpy();
+
+        var options = [
+          {selector: '#staggered-test', offset: 50, callback: 'Materialize.toast("This is our ScrollFire Demo!", 1500); $("#call-1").velocity({ backgroundColor: "#333", color: "#ef5350" }, {duration: 500}); ' },
+          {selector: '#staggered-test', offset: 205, callback: 'Materialize.toast("Please continue scrolling!", 1500); $("#call-2").velocity({ backgroundColor: "#333", color: "#ef5350" }, {duration: 500});' },
+          {selector: '#staggered-test', offset: 500, callback: 'Materialize.showStaggeredList("#staggered-test"); $("#call-3").velocity({ backgroundColor: "#333", color: "#ef5350" }, {duration: 500});' },
+          {selector: '#image-test', offset: 500, callback: 'Materialize.fadeInImage("#image-test"); $("#call-4").velocity({ backgroundColor: "#333", color: "#ef5350" }, {duration: 500});' }
+        ];
+        Materialize.scrollFire(options);
       });
     }
   }
