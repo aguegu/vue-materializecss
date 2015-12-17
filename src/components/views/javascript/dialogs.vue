@@ -9,7 +9,7 @@
         <p class="caption">Dialogs are content that are not original visible on a page but show up with extra information if needed. The transitions should make the appearance of the dialog make sense and not jarring to the user.</p>
         <h2 class="header">Toasts</h2>
         <p>Materialize provides an easy way for you to send unobtrusive alerts to your users through toasts. These toasts are also placed and sized responsively, try it out by clicking the button below on different device sizes.</p>
-        <a class="waves-effect waves-light btn" onclick="Materialize.toast('I am a toast', 4000)">Toast!</a>
+        <a class="waves-effect waves-light btn" @click="toastRegular">Toast!</a>
         <p>To do this, call the Materialize.toast() function programatically in JavaScript.</p>
         <pre><code class="language-javascript">
   // Materialize.toast(message, displayLength, className, completeCallback);
@@ -22,7 +22,7 @@
 
         <h4>Custom HTML</h4>
         <p>You can pass in an HTML String as the first argument as well. Take a look at the example below, where we pass in text as well as a flat button. If you call an external function instead of in-line JavaScript, you will not need to escape quotation marks. </p>
-        <a class="waves-effect waves-light btn" onclick="displayCustomHTMLToast()">Toast with Action</a>
+        <a class="waves-effect waves-light btn" @click="toastWithHtml">Toast with Action</a>
         <pre><code class="language-javascript">
   var $toastContent = $('&lt;span>I am toast content&lt;/span>');
   Materialize.toast($toastContent, 5000);
@@ -30,7 +30,7 @@
 
         <h4>Callback</h4>
         <p>You can have the toast callback a function when it has been dismissed</p>
-        <a class="btn" onclick="Materialize.toast('I am a toast', 4000,'',function(){alert('Your toast was dismissed')})">Toast!</a>
+        <a class="btn" @click="toastWithCallback">Toast!</a>
         <pre><code class="language-markup">
   &lt;a class="btn" onclick="Materialize.toast('I am a toast', 4000,'',function(){alert('Your toast was dismissed')})">Toast!&lt;/a>
         </code></pre>
@@ -38,7 +38,7 @@
         <h4>Styling Toasts</h4>
         <p>We've added the ability to customize your toasts easily. You can pass in classes as an optional parameter into the toast function. We've added a rounded class for you, but you can create your own CSS classes and apply them to toasts. Checkout out our full example below.</p>
 
-        <a class="waves-effect waves-light btn" onclick="Materialize.toast('I am a toast!', 3000, 'rounded')">Round Toast!</a>
+        <a class="waves-effect waves-light btn" @click="toastWithStyle">Round Toast!</a>
 
         <pre><code class="language-javascript">
   Materialize.toast('I am a toast!', 3000, 'rounded') // 'rounded' is the class I'm applying to the toast
@@ -110,17 +110,41 @@
 <script type="text/javascript">
 var $ = require('jquery');
 
+var toast = require('../../../javascripts/toast');
+
 export default {
   route: {
     activate () {
       this.$nextTick(() => {
         $('.toc-wrapper').pushpin({ top: $('nav').height() });
         $('.scrollspy').scrollSpy();
-        $('.tooltipped').tooltip();
+        $('main .tooltipped').tooltip();
       });
     },
     deactivate () {
-      $('.tooltipped').tooltip('remove');
+      $('main .tooltipped').tooltip('remove');
+    }
+  },
+
+  methods: {
+    toastRegular () {
+      // Materialize.toast('I am a toast', 4000);
+      toast('I am a toast', 4000);
+    },
+
+    toastWithHtml () {
+      var $toastContent = $('<span>I am toast content</span>');
+      toast($toastContent, 5000);
+    },
+
+    toastWithCallback () {
+      toast('I am a toast', 4000, '', () => {
+        alert('Your toast was dismissed');
+      });
+    },
+
+    toastWithStyle () {
+      toast('I am a toast!', 3000, 'rounded');
     }
   }
 };

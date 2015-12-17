@@ -44,7 +44,7 @@ foot
   // require("materialize-css/js/tooltip.js");
   require("../javascripts/tooltip.js");
   require("materialize-css/js/waves.js");
-  require("materialize-css/js/toasts.js");
+  // require("materialize-css/js/toasts.js");
 
   require("materialize-css/js/sideNav.js");
   require("materialize-css/js/scrollspy.js");
@@ -184,7 +184,7 @@ foot
     // Plugin initialization
     // $('.slider').slider({full_width: true});
     $('.parallax').parallax();
-    $('.modal-trigger').leanModal();
+    // $('.modal-trigger').leanModal();
     // $('.scrollspy').scrollSpy();
     $('.button-collapse').sideNav({'edge': 'left'});
     // $('.datepicker').pickadate({selectYears: 20});

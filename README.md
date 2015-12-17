@@ -16,7 +16,7 @@ Todos:
 1. convert html templates to jade
 2. convert jade components to vue components
 3. convert some DOM operations to vue implementation
-
+4. replace jquery with zeptojs
 
 # How to run
 ```
