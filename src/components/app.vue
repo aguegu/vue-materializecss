@@ -10,17 +10,6 @@ foot
   import Navbar from './navbar.vue'
   import Foot from './footer.vue'
 
-  export default {
-    components: {
-      Navbar,
-      Foot
-    },
-
-    ready () {
-
-    }
-  }
-
   var $ = window.jQuery = require('jquery');
   // require('materialize-css/bin/materialize.js');
 
@@ -65,7 +54,21 @@ foot
 
   require("materialize-css/js/character_counter.js");
 
+  export default {
+    components: {
+      Navbar,
+      Foot
+    },
 
+    ready () {
+      this.$nextTick(() => {
+        $(function(){
+          $('header .button-collapse').sideNav({'edge': 'left'});
+          $('#nav-mobile .collapsible').collapsible();
+        });
+      });
+    }
+  };
 
   $(function(){
 
@@ -162,6 +165,8 @@ foot
     //   });
     // });
 
+
+
     // Detect touch screen and enable scrollbar if necessary
     function is_touch_device() {
       try {
@@ -181,15 +186,17 @@ foot
       indeterminateCheckbox.indeterminate = true;
 
 
+
+
     // Plugin initialization
     // $('.slider').slider({full_width: true});
     // $('.parallax').parallax();
     // $('.modal-trigger').leanModal();
     // $('.scrollspy').scrollSpy();
-    $('.button-collapse').sideNav({'edge': 'left'});
+    // $('header .button-collapse').sideNav({'edge': 'left'});
     // $('.datepicker').pickadate({selectYears: 20});
     // $('select').not('.disabled').material_select();
-    $('#nav-mobile .collapsible').collapsible();
+    // $('#nav-mobile .collapsible').collapsible();
   }); // end of document ready
 
 </script>
