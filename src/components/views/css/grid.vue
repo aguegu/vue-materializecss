@@ -14,7 +14,7 @@
 
           <h4>Demo</h4>
           <p>Try the button below to see what the page looks like without containers</p>
-          <a id="container-toggle-button" class="btn waves-effect waves-light">Turn off Containers</a>
+          <a class="btn waves-effect waves-light" @click="withContainer = !withContainer;">Turn <span v-if="withContainer">off</span><span v-else>on</span> Containers </a>
 
   <!-- Container Visual Demo -->
           <div class="row">
@@ -34,8 +34,7 @@
                       <!-- <p class="flat-text-logo"></p> -->
                     </div>
                     <div id="site-layout-example-right" class="col s12">
-                      <div class="container">
-
+                      <div v-bind:class="{'container': withContainer, 'had-container': !withContainer}">
                         <p class="flat-text small"></p>
                         <p class="flat-text full-width"></p>
                         <p class="flat-text full-width"></p>
@@ -492,6 +491,12 @@ export default {
         $('.scrollspy').scrollSpy();
       });
     }
+  },
+
+  data () {
+    return {
+      withContainer: true
+    };
   }
 };
 </script>
