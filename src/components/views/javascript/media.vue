@@ -113,8 +113,7 @@
       <br>
       <h4>Fullscreen Slider</h4>
       <p>You can easliy make this slider a fullscreen slider by adding the class <code class="language-markup">fullscreen</code> to the slider div. Here's a quick demo.</p>
-      <a href="fullscreen-slider-demo.html" target="_blank" class="btn-large waves-effect waves-light">Open Demo</a>
-
+      <a v-link="{path: '/javascript/slider_demo'}" class="btn-large waves-effect waves-light">Open Demo</a>
       <br>
       <h4>jQuery Initialization</h4>
        <pre><code class="language-javascript">

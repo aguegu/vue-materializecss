@@ -91,6 +91,9 @@ router.map({
   '/javascript/media': {
     component: require('./components/views/javascript/media.vue')
   },
+  '/javascript/slider_demo': {
+    component: require('./components/views/javascript/slider_demo.vue')
+  },
   '/javascript/modals': {
     component: require('./components/views/javascript/modals.vue')
   },
