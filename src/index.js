@@ -97,6 +97,9 @@ router.map({
   '/javascript/parallax': {
     component: require('./components/views/javascript/parallax.vue')
   },
+  '/javascript/parallax_demo': {
+    component: require('./components/views/javascript/parallax_demo.vue')
+  },
   '/javascript/pushpin': {
     component: require('./components/views/javascript/pushpin.vue')
   },

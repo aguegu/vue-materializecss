@@ -10,7 +10,7 @@
       <div id="introduction" class="scrollspy section">
         <h4>Introduction</h4>
         <p class="caption">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling. Check out the demo to get a better idea of it.</p>
-        <a href="parallax-demo.html" target="_blank" class="btn-large waves-effect waves-light">Open Demo</a>
+        <a v-link="{path: 'parallax_demo'}" class="btn-large waves-effect waves-light">Open Demo</a>
       </div>
 
 
@@ -19,7 +19,7 @@
         <h4>Parallax HTML Structure</h4>
         <pre><code class="language-markup">
     &lt;div class="parallax-container">
-      &lt;div class="parallax">&lt;img src="images/parallax1.jpg">&lt;/div>
+      &lt;div class="parallax">&lt;img src="http://materializecss.com/images/parallax1.jpg">&lt;/div>
     &lt;/div>
         </code></pre>
       </div>
