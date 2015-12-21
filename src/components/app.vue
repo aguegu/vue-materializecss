@@ -43,8 +43,8 @@ foot
   require("materialize-css/js/chips.js");
   require("../javascripts/pushpin.js");
   require("materialize-css/js/buttons.js");
-  require("materialize-css/js/transitions.js");
-  require("materialize-css/js/scrollFire.js");
+  // require("materialize-css/js/transitions.js");
+  // require("materialize-css/js/scrollFire.js");
 
   require('imports?define=>false!pickadate/lib/picker.js');
   require('imports?define=>false!pickadate/lib/picker.date.js');

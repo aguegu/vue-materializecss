@@ -12,7 +12,7 @@
 
         <h4>showStaggeredList</h4>
         <p>Use this to create a staggered reveal effect for any <code class="language-markup">UL</code> Tag with list items. Just make sure the list items in the <code class="language-markup">UL</code> are <code class="language-css">opacity: 0; to ensure the animation works correctly.</code></p>
-        <a href="#!" class="btn" onclick="Materialize.showStaggeredList('#staggered-test')">Click Me</a>
+        <button class="btn" @click="clickShowStaggeredList">Click Me</button>
         <pre><code class="language-markup">
   &lt;a href="#!" class="btn" onclick="Materialize.showStaggeredList('#staggered-test')">Click Me&lt;/a>
         </code></pre>
@@ -43,7 +43,7 @@
       <div id="fadeImage" class="section scrollspy">
         <h4>fadeInImage</h4>
         <p>Use this to fade in images. It also animates grayscale and brightness to give it a unique effect.</p>
-        <a href="#!" class="btn" onclick="Materialize.fadeInImage('#image-test')">Click Me</a>
+        <button class="btn" @click="clickFadeInImage">Click Me</button>
         <pre><code class="language-markup">
   &lt;a href="#!" class="btn" onclick="Materialize.fadeInImage('#image-test')">Click Me&lt;/a>
         </code></pre>
@@ -74,6 +74,9 @@
 <script type="text/javascript">
 var $ = require('jquery');
 
+var fadeInImage = require('../../../javascripts/fadeinimage');
+var showStaggeredList = require('../../../javascripts/showstaggeredlist');
+
 export default {
   route: {
     activate () {
@@ -81,6 +84,16 @@ export default {
         $('.toc-wrapper').pushpin({ top: $('nav').height() });
         $('.scrollspy').scrollSpy();
       });
+    }
+  },
+
+  methods: {
+    clickShowStaggeredList: () => {
+      showStaggeredList('#staggered-test');
+    },
+
+    clickFadeInImage: () => {
+      fadeInImage('#image-test');
     }
   }
 };
