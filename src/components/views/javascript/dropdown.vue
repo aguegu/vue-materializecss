@@ -122,6 +122,7 @@
 </template>
 <script type="text/javascript">
 var $ = require('jquery');
+let prism = require('prismjs');
 
 export default {
   route: {
@@ -130,6 +131,7 @@ export default {
         $('.toc-wrapper').pushpin({ top: $('nav').height() });
         $('.scrollspy').scrollSpy();
         $('main .dropdown-button').dropdown();
+        prism.highlightAll();
       });
     }
   }

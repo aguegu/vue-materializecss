@@ -193,6 +193,7 @@ $('.slider').slider('prev');
 
 <script type="text/javascript">
 var $ = require('jquery');
+let prism = require('prismjs');
 
 export default {
   route: {
@@ -202,6 +203,7 @@ export default {
         $('.scrollspy').scrollSpy();
         $('.materialboxed').materialbox();
         $('.slider').slider();
+        prism.highlightAll();
       });
     }
   }

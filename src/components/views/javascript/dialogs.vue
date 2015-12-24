@@ -109,6 +109,7 @@
 
 <script type="text/javascript">
 var $ = require('jquery');
+let prism = require('prismjs');
 
 var toast = require('../../../javascripts/toast');
 
@@ -119,6 +120,7 @@ export default {
         $('.toc-wrapper').pushpin({ top: $('nav').height() });
         $('.scrollspy').scrollSpy();
         $('main .tooltipped').tooltip();
+        prism.highlightAll();
       });
     },
     deactivate () {

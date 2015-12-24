@@ -385,14 +385,16 @@ $(".dropdown-button").dropdown();
 
 <script type="text/javascript">
 var $ = require('jquery');
+let prism = require('prismjs');
 
 export default {
   route: {
     activate () {
       this.$nextTick(() => {
         $('.toc-wrapper').pushpin({ top: $('nav').height() });
-        $('.scrollspy').scrollSpy();        
+        $('.scrollspy').scrollSpy();
         $('.dropdown-button').dropdown();
+        prism.highlightAll();
       });
     }
   }

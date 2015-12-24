@@ -54,6 +54,8 @@ foot
 
   require("materialize-css/js/character_counter.js");
 
+  require('prismjs/themes/prism.css');
+
   export default {
     components: {
       Navbar,

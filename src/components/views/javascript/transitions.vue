@@ -73,6 +73,7 @@
 
 <script type="text/javascript">
 var $ = require('jquery');
+let prism = require('prismjs');
 
 var fadeInImage = require('../../../javascripts/fadeinimage');
 var showStaggeredList = require('../../../javascripts/showstaggeredlist');
@@ -83,6 +84,7 @@ export default {
       this.$nextTick(() => {
         $('.toc-wrapper').pushpin({ top: $('nav').height() });
         $('.scrollspy').scrollSpy();
+        prism.highlightAll();
       });
     }
   },

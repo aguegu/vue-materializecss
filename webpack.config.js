@@ -13,6 +13,7 @@ module.exports = {
       { test: /\.js$/, exclude: /node_modules/, loader: "babel"},
       { test: /\.woff2?$|\.ttf$|\.eot$|\.svg$/, loader: 'file'},
       { test: /\.scss$/, loaders: ["style", "css", "resolve-url", "sass?sourceMap"] },
+      { test: /\.css$/, loaders: ["style", "css"] },
       { test: /\.(png|jpg|gif)$/, loader: 'file'},
       // { test: /materialize-css\/bin\//, loader: 'imports?jQuery=jquery, $=jquery,hammerjs' },
     ]

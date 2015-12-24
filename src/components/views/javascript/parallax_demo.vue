@@ -49,13 +49,17 @@
 </template>
 
 <script type="text/javascript">
+
 var $ = require('jquery');
+let prism = require('prismjs');
+
 export default {
   route: {
     activate () {
       this.$nextTick(() => {
         $('header:first').hide();
         $('.parallax').parallax();
+        prism.highlightAll();
       });
     },
     deactivate () {

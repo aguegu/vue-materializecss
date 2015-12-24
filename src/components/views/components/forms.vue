@@ -830,6 +830,7 @@
 
 <script type="text/javascript">
 var $ = require('jquery');
+let prism = require('prismjs');
 
 export default {
   route: {
@@ -841,6 +842,7 @@ export default {
         $('select').not('.disabled').material_select();
         $('.datepicker').pickadate({selectYears: 20});
         $('input, textarea').characterCounter();
+        prism.highlightAll();
       });
     },
     deactivate () {

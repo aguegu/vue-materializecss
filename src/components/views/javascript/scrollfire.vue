@@ -118,6 +118,7 @@ var scrollfire = require('../../../javascripts/scrollfire');
 var toast = require('../../../javascripts/toast');
 var fadeInImage = require('../../../javascripts/fadeinimage');
 var showStaggeredList = require('../../../javascripts/showstaggeredlist');
+let prism = require('prismjs');
 
 export default {
   route: {
@@ -171,6 +172,8 @@ export default {
           }
         ];
         scrollfire(options);
+
+        prism.highlightAll();
       });
     }
   }
