@@ -110,3 +110,35 @@ header
       a.waves-effect.waves-teal(v-link="{path: '/showcase'}") Showcase
 
 </template>
+
+
+<script type="text/javascript">
+
+var $ = require('jquery');
+
+export default {
+  ready () {
+    this.$nextTick(() => {
+      $(function(){
+        $('header .button-collapse').sideNav({'edge': 'left'});
+        $('#nav-mobile .collapsible').collapsible();
+
+        function is_touch_device() {
+          try {
+            document.createEvent("TouchEvent");
+            return true;
+          } catch (e) {
+            return false;
+          }
+        }
+
+        if (is_touch_device()) {
+          $('#nav-mobile').css({ overflow: 'auto'});
+        }
+        
+      });
+    });
+  }
+};
+
+</script>

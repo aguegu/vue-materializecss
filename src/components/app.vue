@@ -7,8 +7,8 @@ foot
 <script>
     // var $ = require('../materialize.js');
 
-  import Navbar from './navbar.vue'
-  import Foot from './footer.vue'
+  // import Navbar from './navbar.vue'
+  // import Foot from './footer.vue'
 
   var $ = window.jQuery = require('jquery');
   // require('materialize-css/bin/materialize.js');
@@ -58,23 +58,21 @@ foot
 
   export default {
     components: {
-      Navbar,
-      Foot
+      Navbar: require('./navbar.vue'),
+      Foot: require('./footer.vue')
     },
 
-    ready () {
-      this.$nextTick(() => {
-        $(function(){
-          $('header .button-collapse').sideNav({'edge': 'left'});
-          $('#nav-mobile .collapsible').collapsible();
-        });
-      });
-    }
+    // ready () {
+    //   this.$nextTick(() => {
+    //     $(function(){
+    //       $('header .button-collapse').sideNav({'edge': 'left'});
+    //       $('#nav-mobile .collapsible').collapsible();
+    //     });
+    //   });
+    // }
   };
 
-  $(function(){
-
-
+  // $(function(){
     // // convert rgb to hex value string
     // function rgb2hex(rgb) {
     //   if (/^#[0-9A-F]{6}$/i.test(rgb)) { return rgb; }
@@ -170,17 +168,17 @@ foot
 
 
     // Detect touch screen and enable scrollbar if necessary
-    function is_touch_device() {
-      try {
-        document.createEvent("TouchEvent");
-        return true;
-      } catch (e) {
-        return false;
-      }
-    }
-    if (is_touch_device()) {
-      $('#nav-mobile').css({ overflow: 'auto'});
-    }
+    // function is_touch_device() {
+    //   try {
+    //     document.createEvent("TouchEvent");
+    //     return true;
+    //   } catch (e) {
+    //     return false;
+    //   }
+    // }
+    // if (is_touch_device()) {
+    //   $('#nav-mobile').css({ overflow: 'auto'});
+    // }
 
     // // Set checkbox on forms.html to indeterminate
     // var indeterminateCheckbox = document.getElementById('indeterminate-checkbox');
@@ -199,6 +197,6 @@ foot
     // $('.datepicker').pickadate({selectYears: 20});
     // $('select').not('.disabled').material_select();
     // $('#nav-mobile .collapsible').collapsible();
-  }); // end of document ready
+  // }); // end of document ready
 
 </script>
