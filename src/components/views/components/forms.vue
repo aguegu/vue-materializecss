@@ -836,6 +836,12 @@ export default {
   route: {
     activate () {
       this.$nextTick(() => {
+
+        // Set checkbox on forms.html to indeterminate
+        var indeterminateCheckbox = document.getElementById('indeterminate-checkbox');
+        if (indeterminateCheckbox !== null)
+          indeterminateCheckbox.indeterminate = true;
+
         $('.toc-wrapper').pushpin({ top: $('nav').height() });
         $('.scrollspy').scrollSpy();
         $('.slider').slider({full_width: true});

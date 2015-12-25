@@ -182,10 +182,10 @@ foot
       $('#nav-mobile').css({ overflow: 'auto'});
     }
 
-    // Set checkbox on forms.html to indeterminate
-    var indeterminateCheckbox = document.getElementById('indeterminate-checkbox');
-    if (indeterminateCheckbox !== null)
-      indeterminateCheckbox.indeterminate = true;
+    // // Set checkbox on forms.html to indeterminate
+    // var indeterminateCheckbox = document.getElementById('indeterminate-checkbox');
+    // if (indeterminateCheckbox !== null)
+    //   indeterminateCheckbox.indeterminate = true;
 
 
 
