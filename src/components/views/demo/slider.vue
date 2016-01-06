@@ -32,15 +32,9 @@ export default {
   route: {
     activate () {
       this.$nextTick(() => {
-        $('header').hide();
-        $('footer').hide();
         $('.slider').slider({full_width: true});
       });
-    },
-    deactivate () {
-      $('header').show();
-      $('footer').show();
-    }
+    }    
   }
 }
 

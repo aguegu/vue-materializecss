@@ -1,7 +1,5 @@
 <template lang="jade">
-navbar
 router-view
-foot
 </template>
 
 <script>
@@ -56,21 +54,21 @@ foot
 
   require('prismjs/themes/prism.css');
 
-  export default {
-    components: {
-      Navbar: require('./navbar.vue'),
-      Foot: require('./footer.vue')
-    },
-
-    // ready () {
-    //   this.$nextTick(() => {
-    //     $(function(){
-    //       $('header .button-collapse').sideNav({'edge': 'left'});
-    //       $('#nav-mobile .collapsible').collapsible();
-    //     });
-    //   });
-    // }
-  };
+  // export default {
+  //   components: {
+  //     Navbar: require('./navbar.vue'),
+  //     Foot: require('./footer.vue')
+  //   },
+  //
+  //   // ready () {
+  //   //   this.$nextTick(() => {
+  //   //     $(function(){
+  //   //       $('header .button-collapse').sideNav({'edge': 'left'});
+  //   //       $('#nav-mobile .collapsible').collapsible();
+  //   //     });
+  //   //   });
+  //   // }
+  // };
 
   // $(function(){
     // // convert rgb to hex value string

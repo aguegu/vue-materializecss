@@ -57,13 +57,9 @@ export default {
   route: {
     activate () {
       this.$nextTick(() => {
-        $('header:first').hide();
         $('.parallax').parallax();
         prism.highlightAll();
       });
-    },
-    deactivate () {
-      $('header:first').show();
     }
   }
 }

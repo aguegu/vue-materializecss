@@ -3,8 +3,16 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
-var Foo = Vue.extend({
+var FullScreen = Vue.extend({
   template: '<router-view></router-view>'
+});
+
+var Main = Vue.extend({
+  template: '<navbar></navbar><router-view></router-view><footer></footer>',
+  components: {
+    Navbar: require('./components/navbar.vue'),
+    Foot: require('./components/footer.vue')
+  },
 });
 
 Vue.use(Router);
@@ -14,17 +22,29 @@ var router = new Router({
 });
 
 router.map({
-  '/home': {
-    component: require('./components/views/home.vue')
+  '/': {
+    component: Main,
+    subRoutes: {
+      '/home': {
+        component: require('./components/views/home.vue')
+      },
+      '/about': {
+        component: require('./components/views/about.vue')
+      },
+      '/getting_started': {
+        component: require('./components/views/getting_started.vue')
+      },
+      '/mobile': {
+        component: require('./components/views/mobile.vue')
+      },
+      '/showcase': {
+        component: require('./components/views/showcase.vue')
+      },
+    }
   },
-  '/about': {
-    component: require('./components/views/about.vue')
-  },
-  '/getting_started': {
-    component: require('./components/views/getting_started.vue')
-  },
+
   '/css': {
-    component: Foo,
+    component: Main,
     subRoutes: {
       '/color': {
         component: require('./components/views/css/color.vue')
@@ -35,8 +55,8 @@ router.map({
       '/helpers': {
         component: require('./components/views/css/helpers.vue')
       },
-      '/css_media': {
-        component: require('./components/views/css/css_media.vue')
+      '/media': {
+        component: require('./components/views/css/media.vue')
       },
       '/sass': {
         component: require('./components/views/css/sass.vue')
@@ -53,7 +73,7 @@ router.map({
     }
   },
   '/components': {
-    component: Foo,
+    component: Main,
     subRoutes: {
       '/badges': {
         component: require('./components/views/components/badges.vue')
@@ -94,7 +114,7 @@ router.map({
     }
   },
   '/javascript': {
-    component: Foo,
+    component: Main,
     subRoutes: {
       '/collapsible': {
         component: require('./components/views/javascript/collapsible.vue')
@@ -108,17 +128,11 @@ router.map({
       '/media': {
         component: require('./components/views/javascript/media.vue')
       },
-      '/slider_demo': {
-        component: require('./components/views/javascript/slider_demo.vue')
-      },
       '/modals': {
         component: require('./components/views/javascript/modals.vue')
       },
       '/parallax': {
         component: require('./components/views/javascript/parallax.vue')
-      },
-      '/parallax_demo': {
-        component: require('./components/views/javascript/parallax_demo.vue')
       },
       '/pushpin': {
         component: require('./components/views/javascript/pushpin.vue')
@@ -143,15 +157,17 @@ router.map({
       }
     }
   },
-
-  '/mobile': {
-    component: require('./components/views/mobile.vue')
-  },
-
-  '/showcase': {
-    component: require('./components/views/showcase.vue')
+  '/demo': {
+    component: FullScreen,
+    subRoutes: {
+      '/parallax': {
+        component: require('./components/views/demo/parallax.vue')
+      },
+      '/slider': {
+        component: require('./components/views/demo/slider.vue')
+      },
+    }
   }
-
 });
 
 router.redirect({

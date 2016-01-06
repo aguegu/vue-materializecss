@@ -34,8 +34,8 @@ header
                 a(v-link="{path: '/css/grid'}") Grid
               li(v-link="{path: '/css/helpers', activeClass: 'active'}")
                 a(v-link="{path: '/css/helpers'}") Helpers
-              li(v-link="{path: '/css/css_media', activeClass: 'active'}")
-                a(v-link="{path: '/css/css_media'}") Media
+              li(v-link="{path: '/css/media', activeClass: 'active'}")
+                a(v-link="{path: '/css/media'}") Media
               li(v-link="{path: '/css/sass', activeClass: 'active'}")
                 a(v-link="{path: '/css/sass'}") Sass
               li(v-link="{path: '/css/shadow', activeClass: 'active'}")
@@ -135,7 +135,7 @@ export default {
         if (is_touch_device()) {
           $('#nav-mobile').css({ overflow: 'auto'});
         }
-        
+
       });
     });
   }
