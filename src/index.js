@@ -3,7 +3,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
-var FullScreen = Vue.extend({
+var Basic = Vue.extend({
   template: '<router-view></router-view>'
 });
 
@@ -160,7 +160,7 @@ router.map({
     }
   },
   '/demo': {
-    component: FullScreen,
+    component: Basic,
     subRoutes: {
       '/parallax': {
         component: require('./components/views/demo/parallax.vue')
@@ -182,4 +182,4 @@ router.beforeEach(function () {
 
 
 
-router.start(FullScreen, 'template');
+router.start(Basic, 'template');
